@@ -1,7 +1,7 @@
 # CUDA-Cpp-Projects
 CUDA/C++ optimization programs 
 
-Here are the implimentation of CUDA/C++ programs which are optimized to a good Kernel.
+Here are the implimentation of CUDA/C++ programs which are optimized to a good Kernel time.
 These are the improvment in there time for the optimization steps.
 
 ## Matrix Multiplaction 
@@ -33,5 +33,5 @@ These are the improvment in there time for the optimization steps.
 | CacheSimplification |   75.68            |            
 | 2DConvolution |        320.93            |
 
-=> This repository contains the cuda code in c++ for  the above optimizations. 
-=> And also the kernal report using Nsight Compute profiler.
+* This repository contains the cuda code in c++ for  the above optimizations. 
+* And also the kernal report using Nsight Compute profiler.
