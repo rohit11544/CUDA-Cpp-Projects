@@ -1,7 +1,7 @@
 # CUDA-Cpp-Projects
 CUDA/C++ optimization programs 
 
-Here are the implimentation of CUDA/C++ programs which are optimized to a good Kernel time.
+Here are the implimentation of CUDA/C++ programs which are optimized to a have a good Kernel time.
 These are the improvment in there time for the optimization steps.
 
 ## Matrix Multiplaction 
