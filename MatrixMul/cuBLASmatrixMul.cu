@@ -1,5 +1,3 @@
-// This program shows off some basic cuBLAS examples
-// By: Nick from CoffeeBeforeArch
 #include "cuda_runtime.h"
 #include "device_launch_parameters.h"
 
@@ -11,14 +9,14 @@
 #include <assert.h>
 #include <math.h>
 
-// Initialize a vector
+
 void vector_init(float* a, int n) {
 	for (int i = 0; i < n; i++) {
 		a[i] = (float)(rand() % 100);
 	}
 }
 
-// Verify the result
+
 void verify_result(float* a, float* b, float* c, float factor, int n) {
 	for (int i = 0; i < n; i++) {
 		assert(c[i] == factor * a[i] + b[i]);
@@ -26,11 +24,9 @@ void verify_result(float* a, float* b, float* c, float factor, int n) {
 }
 
 int main() {
-	// Vector size
 	int n = 1 << 16;
 	size_t bytes = n * sizeof(float);
 
-	// Declare vector pointers
 	float* h_a, * h_b, * h_c;
 	float* d_a, * d_b;
 
@@ -53,21 +49,16 @@ int main() {
 	cublasSetVector(n, sizeof(float), h_a, 1, d_a, 1);
 	cublasSetVector(n, sizeof(float), h_b, 1, d_b, 1);
 
-	// Launch simple saxpy kernel (single precision a * x + y)
-	// Function signature: handle, # elements n, A, increment, B, increment
 	const float scale = 2.0f;
 	cublasSaxpy(handle, n, &scale, d_a, 1, d_b, 1);
 
 	// Copy the result vector back out
 	cublasGetVector(n, sizeof(float), d_b, 1, h_c, 1);
 
-	// Print out the result
 	verify_result(h_a, h_b, h_c, scale, n);
 
-	// Clean up the created handle
 	cublasDestroy(handle);
 
-	// Release allocated memory
 	cudaFree(d_a);
 	cudaFree(d_b);
 	free(h_a);
