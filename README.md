@@ -18,7 +18,7 @@ These are the improvments in excution time for the specific optimization steps.
 | Optimization        | Kernel Time (msec)        |
 | --------------------|:-------------------------:|
 | BaseLine            |         13.41             |  
-| NoWarpDiversion     |         11.26             |            
+| NoWarpDivergance    |         11.26             |            
 | NoBankConflits      |         9.38              |     
 | LaunchHalfThreads   |         7.80              |
 | CoparativeGroup     |         3.14              | 
