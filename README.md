@@ -11,7 +11,7 @@ These are the improvments in excution time for the specific optimization steps.
 | BaseLine     |         24.44             |            
 | cuBLAS       |         7.81              |            
 | Tiling       |         7.80              |            
-       
+There is an improvement from 24.44 ms to 7.80 ms.
 
 ## Sum Reduction
 
@@ -22,7 +22,7 @@ These are the improvments in excution time for the specific optimization steps.
 | NoBankConflits      |         9.38              |     
 | LaunchHalfThreads   |         7.80              |
 | CoparativeGroup     |         3.14              | 
-
+There is an improvement from 13.41 ms to 3.14 ms.
 
 ## Convolution
 
@@ -32,7 +32,7 @@ These are the improvments in excution time for the specific optimization steps.
 | Tiling       |          88.45            |            
 | CacheSimplification |   75.68            |            
 | 2DConvolution |        320.93            |
-
+There is an improvement from 108.67 ms to 75.68 ms.
 
 ## Streams 
 
@@ -41,14 +41,14 @@ These are the improvments in excution time for the specific optimization steps.
 | MatrixMul    |         6.885             |         5.3015            |
 | SumReduction |         1.9601            |         1.5442            |
 | VectorAdd    |         0.9377            |         0.5717            |
-
+There is an improvement in time of 23% for MatrixMul, 21.21% in SumReduction and 39% in VectorAdd.
 
 ## Cooprative Groups
 
 | Operation          | Without Cooprative Groups (msec)    |  With Cooprative Groups (msec)      |
 | -------------------|:-----------------------------------:|:-----------------------------------:|
 | BinarySumReduction |         0.1088                      |         0.0875                      |
-
+There is an improvement from 0.1088 ms to 0.0875 ms.
 
 * This repository contains the cuda code in c++ for  the above optimizations. 
 * And also the kernal report using Nsight Compute profiler.
