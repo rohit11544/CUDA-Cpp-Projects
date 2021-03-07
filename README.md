@@ -45,6 +45,7 @@ There is an improvement from 108.67 ms to 75.68 ms.
 | SumReduction |         1.9601            |         1.5442            |
 | VectorAdd    |         0.9377            |         0.5717            |
 
+
 There is an improvement in time of 23% for MatrixMul, 21.21% in SumReduction and 39% in VectorAdd.
 
 ## Cooprative Groups
@@ -52,6 +53,7 @@ There is an improvement in time of 23% for MatrixMul, 21.21% in SumReduction and
 | Operation          | Without Cooprative Groups (msec)    |  With Cooprative Groups (msec)      |
 | -------------------|:-----------------------------------:|:-----------------------------------:|
 | BinarySumReduction |         0.1088                      |         0.0875                      |
+
 There is an improvement from 0.1088 ms to 0.0875 ms.
 
 * This repository contains the cuda code in c++ for  the above optimizations. 
